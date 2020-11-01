@@ -5,6 +5,13 @@
 <title>Booking</title>
 <link rel="stylesheet" href="form.css">
 <style>
+	.holder{
+		background-image: linear-gradient(red,green);
+		width:300px;
+		position: absolute;
+		left:520px;
+		padding:10px;
+	}
 	.f1{
 		position: relative;
 		align-items: center;
@@ -51,8 +58,9 @@
 </script>
 </head>
     <body background="dr.jpg">
+    	<center><h1>OPD BOOKING</h1></center>
+    	<div class="holder">
 <center><form onsubmit="return valid()" class="f1"action="navbar.html">
-<h1>OPD BOOKING</h1>
 <label>Patient Name</label><br/>
 <input type="text"  id="patname" placeholder="Patient Name" >
 <br/>
@@ -91,7 +99,7 @@
 <br/><br/>
 <button type="submit" class="btn">Book Appointment</button>
 </form></center>
-
+</div>
 
 </body>
 </html>
