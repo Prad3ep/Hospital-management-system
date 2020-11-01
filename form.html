@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Booking</title>
+<link rel="stylesheet" href="form.css">
+<style>
+	.f1{
+		position: relative;
+		align-items: center;
+		font-size: 20px;
+	}
+	input[type="text"]{
+		border:none;
+		border-bottom:1px solid black;
+		font-size: 15px;
+		outline: none;
+	}
+	input[type="date"]{
+		border:none;
+		border-bottom:1px solid black;
+	}
+	input[type="time"]{
+		border:none;
+		border-bottom:1px solid black;
+	}
+</style>
+<script>
+	function valid()
+	{
+		var pname=document.getElementById("patname").value;
+		var phnno=document.getElementById("phno").value;
+		var cat=document.getElementById("purpose").value;
+		var day=document.getElementById("date").value;
+		var tim=document.getElementById("time").value;
+		if(pname==""||phnno==""||cat==""||day==""||tim=="")
+		{
+			alert("enter complete details");
+			return false;
+		}
+		else if(isNaN(phnno)||phnno.length!=10){
+			alert("phone no must be a 10 digit number");
+			return false;
+		}
+		else
+		{
+			alert("Details registered successfully");
+			return true;
+		}
+	}
+</script>
+</head>
+    <body background="dr.jpg">
+<center><form onsubmit="return valid()" class="f1"action="navbar.html">
+<h1>OPD BOOKING</h1>
+<label>Patient Name</label><br/>
+<input type="text"  id="patname" placeholder="Patient Name" >
+<br/>
+<br/>
+<label>Phone no</label><br/>
+<input type="text" id="phno" placeholder="Phone no" >
+<br>
+<br>
+<label>Gender</label><br/>
+<select name="select" id="purpose">
+<option value="1">Male</option>
+<option value="2">Female</option>
+</select>
+<br>
+<br>
+<label>Reason for visit</label><br/>
+<select name="select" id="purpose">
+<option value="1">General purpose</option>
+<option value="2">Cardiology</option>
+<option value="3">Dermatology</option>
+<option value="4">Neurology</option>
+<option value="4">Pediatricians</option>
+<option value="4">Homoeopathy</option>
+<option value="4">Nephrology</option>
+
+</select>
+<br>
+<br>
+
+<label>Date</label><br/>
+<input type="date" id="date">
+<br>
+<br>
+<label>Time</label><br/>
+<input type="time"  id="time">
+<br/><br/>
+<button type="submit" class="btn">Book Appointment</button>
+</form></center>
+
+
+</body>
+</html>
